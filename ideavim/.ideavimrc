@@ -31,8 +31,8 @@ set clipboard+=unnamedplus
 nnoremap <SPACE> <Nop>
 let mapleader=" "
 
-map <A-[> gT
-map <A-]> gt
+map <C-[> gT
+map <C-]> gt
 
 nnoremap <leader>O O<ESC>O
 nnoremap <leader>o o<cr>
@@ -40,8 +40,45 @@ nnoremap <leader>o o<cr>
 nnoremap <leader>j ddjP
 nnoremap <leader>k ddkP
 
+" Go to definition in current tab / active split
+nnoremap <leader>gd :action GotoDeclaration<CR>
+
+" cycle between tabs
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+" fuzzy finding
+map <Leader>mf <action>(com.mituuz.fuzzier.FuzzyMover)
+map <Leader>gf <action>(com.mituuz.fuzzier.FuzzierVCS)
+map <Leader>ff <action>(com.mituuz.fuzzier.Fuzzier)
+
 nmap <Leader>d :action ShowErrorDescription<CR>
 
-" clang format
-autocmd BufWritePre *.cpp,*.h :silent! !clang-format -i %
-nnoremap <leader>f :!clang-format -i %<CR>
+nmap <Leader>tt :action ActivateTerminalToolWindow<CR>
+
+" build and run shortcuts
+map <Leader>cb <Action>(CompileProject)
+map <Leader>cr <Action>(Run)
+map <Leader>cd <Action>(Debug)
+
+" plugins from plugin marketplace
+set which-key
+
+" configure vim-flash
+nmap s <Action>(flash.search)
+xmap s <Action>(flash.search)
+
+nmap f <Action>(flash.find)
+xmap f <Action>(flash.find)
+nmap F <Action>(flash.find_backward)
+xmap F <Action>(flash.find_backward)
+nmap t <Action>(flash.till)
+xmap t <Action>(flash.till)
+nmap T <Action>(flash.till_backward)
+xmap T <Action>(flash.till_backward)
+nmap ; <Action>(flash.repeat)
+xmap ; <Action>(flash.repeat)
+nmap , <Action>(flash.repeat_backward)
+xmap , <Action>(flash.repeat_backward)

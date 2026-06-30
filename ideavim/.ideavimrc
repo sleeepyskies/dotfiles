@@ -1,0 +1,47 @@
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+" Plugins
+Plug 'tpope/vim-surround'
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" Do incremental searching.
+set incsearch
+
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+
+"" Activate vim helper plugin
+set which-key
+set notimeout
+set timeoutlen=5000
+
+"" Set relative line numbers
+:set relativenumber
+
+" Use the system clipboard for all yank, delete, change, and put operations
+set clipboard+=unnamedplus
+
+" Remaps
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+
+map <A-[> gT
+map <A-]> gt
+
+nnoremap <leader>O O<ESC>O
+nnoremap <leader>o o<cr>
+
+nnoremap <leader>j ddjP
+nnoremap <leader>k ddkP
+
+nmap <Leader>d :action ShowErrorDescription<CR>
+
+" clang format
+autocmd BufWritePre *.cpp,*.h :silent! !clang-format -i %
+nnoremap <leader>f :!clang-format -i %<CR>

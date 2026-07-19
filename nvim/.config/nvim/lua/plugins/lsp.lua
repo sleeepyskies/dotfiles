@@ -6,14 +6,13 @@ return {
   {
     "neovim/nvim-lspconfig",
     opts = {
+      inlay_hints = { enabled = false },
       servers = {
         -- webdev
         ts_ls = {},
         eslint = {},
 
-        pyright = {
-          root_dir = require("lspconfig.util").root_pattern("pyproject.toml", "requirements.txt", ".venv"),
-        },
+        pyright = {},
       },
     },
   },

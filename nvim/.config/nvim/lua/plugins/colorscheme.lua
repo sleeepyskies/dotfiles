@@ -22,7 +22,7 @@ return {
       statementStyle = { bold = true },
       typeStyle = {},
       transparent = false,
-      theme = "dragon",
+      theme = "wave",
     },
   },
 
@@ -33,11 +33,18 @@ return {
     },
   },
 
+  {
+    "zenbones-theme/zenbones.nvim",
+    dependencies = "rktjmp/lush.nvim",
+    lazy = false,
+    priority = 1000,
+  },
+
   -- select which colorscheme to use
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "dracula",
+      colorscheme = "zenbones",
     },
   },
 }

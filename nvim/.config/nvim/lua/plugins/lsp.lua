@@ -13,6 +13,12 @@ return {
         eslint = {},
 
         pyright = {},
+
+        clangd = {
+          init_options = {
+            fallbackFlags = { "-std=c++23" },
+          },
+        },
       },
     },
   },

@@ -45,6 +45,8 @@ return {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "zenbones",
+      italic_comments = true,
+      italic_strings = true,
     },
   },
 }

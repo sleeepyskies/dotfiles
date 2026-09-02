@@ -1,6 +1,5 @@
 [general]
-# import any custom files
-import = ["~/.config/alacritty/themes/dracula.toml"]
+import = ["./themes/zenbones.toml"]
 
 [keyboard]
 bindings = [{ key = "F11", action = "ToggleFullscreen" }]
@@ -10,6 +9,3 @@ normal = { family = "LiberationMono", style = "Regular" }
 bold = { family = "LiberationMono", style = "Bold" }
 italic = { family = "LiberationMono", style = "Italic" }
 size = 12.0
-
-[window]
-opacity = 0.75

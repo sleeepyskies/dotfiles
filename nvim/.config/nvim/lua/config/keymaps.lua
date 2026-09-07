@@ -2,6 +2,8 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
-vim.keymap.set("n", "<leader>dd", function()
+local keymap = vim.keymap
+
+keymap.set("n", "<leader>dd", function()
   vim.diagnostic.open_float()
 end)

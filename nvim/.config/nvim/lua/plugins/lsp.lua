@@ -3,23 +3,23 @@
 -- It does NOT install them (Mason handles that) and does NOT handle formatting/linters.
 
 return {
-  {
-    "neovim/nvim-lspconfig",
-    opts = {
-      inlay_hints = { enabled = false },
-      servers = {
-        -- webdev
-        ts_ls = {},
-        eslint = {},
+    {
+        "neovim/nvim-lspconfig",
+        opts = {
+            inlay_hints = { enabled = false },
+            servers = {
+                -- webdev
+                ts_ls = {},
+                eslint = {},
 
-        pyright = {},
+                pyright = {},
 
-        clangd = {
-          init_options = {
-            fallbackFlags = { "-std=c++23" },
-          },
+                clangd = {
+                    init_options = {
+                        fallbackFlags = { "-std=c++23" },
+                    },
+                },
+            },
         },
-      },
     },
-  },
 }

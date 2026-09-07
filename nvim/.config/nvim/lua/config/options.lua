@@ -3,6 +3,6 @@
 -- Add any additional options here
 
 local opt = vim.opt
-opt.shiftwidth = 4 -- default to indent of size 4 over size 2 for all langs
+opt.shiftwidth = 4
 opt.colorcolumn = "80,120"
 opt.background = "dark"

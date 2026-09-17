@@ -1,4 +1,5 @@
 theme = zenbones-zenwritten-dark
 # font-family = "JetBrains Mono"
 # font-family = "JetBrains Mono"
-font-family = "Liberation Mono"
+font-family = "Victor Mono"
+font-size = 18

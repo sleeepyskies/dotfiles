@@ -1,3 +1,3 @@
 # `dotfiles`
 
-This repo contains all of my dotfiles to sync across machines.
+This repo contains all of my dot files to sync across machines.

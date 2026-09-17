@@ -93,3 +93,5 @@ alias lda="lsd -lA"
 # Created by `pipx` on 2026-06-27 09:55:14
 export PATH="$PATH:/home/strawberry/.local/bin"
 export PATH="$PATH:/home/strawberry/go/bin"
+
+fastfetch

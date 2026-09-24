@@ -1,5 +1,8 @@
 theme = zenbones-zenwritten-dark
+background-opacity = 0.85
 # font-family = "JetBrains Mono"
-# font-family = "JetBrains Mono"
-font-family = "Victor Mono"
-font-size = 18
+# font-family = "VictorMono Nerd Font Mono"
+# font-family = "LiterationMono Nerd Font Mono"
+# font-family = "FiraCode Nerd Font" 
+font-family = "Liga SFMono Nerd Font" 
+font-size = 20

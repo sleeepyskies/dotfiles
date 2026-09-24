@@ -14,6 +14,15 @@ return {
 
                 pyright = {},
 
+                -- custom file formats using yaml
+                yamlls = {
+                    filetypes = {
+                        "yaml",
+                        "yml",
+                        "sshg", -- custom 2iREN shader format
+                    },
+                },
+
                 -- c/c++
                 clangd = {
                     init_options = {

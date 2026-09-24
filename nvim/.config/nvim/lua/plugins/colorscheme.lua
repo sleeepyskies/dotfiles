@@ -38,6 +38,11 @@ return {
         dependencies = "rktjmp/lush.nvim",
         lazy = false,
         priority = 1000,
+        init = function()
+            vim.g.zenbones = {
+                transparent_background = true,
+            }
+        end,
     },
 
     -- select which colorscheme to use
@@ -45,8 +50,6 @@ return {
         "LazyVim/LazyVim",
         opts = {
             colorscheme = "zenbones",
-            italic_comments = true,
-            italic_strings = true,
         },
     },
 }

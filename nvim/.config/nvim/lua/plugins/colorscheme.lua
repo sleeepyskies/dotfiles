@@ -42,6 +42,9 @@ return {
             vim.g.zenbones = {
                 transparent_background = true,
             }
+            vim.g.zenwritten = {
+                transparent_background = true,
+            }
         end,
     },
 
@@ -49,7 +52,7 @@ return {
     {
         "LazyVim/LazyVim",
         opts = {
-            colorscheme = "zenbones",
+            colorscheme = "zenwritten",
         },
     },
 }

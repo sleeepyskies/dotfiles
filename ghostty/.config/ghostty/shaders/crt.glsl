@@ -49,10 +49,10 @@
 #define SCAN_LINES_STRENGTH 0.20
 // How bright the spaces between the lines are
 // [0, 1]
-#define SCAN_LINES_VARIANCE 0.35
+#define SCAN_LINES_VARIANCE 1
 // Pixels per scan line effect
 // x \in R : x > 0
-#define SCAN_LINES_PERIOD 4.0
+#define SCAN_LINES_PERIOD 1
 
 // How visible the aperture grille is
 // x \in R : x >= 0
@@ -77,14 +77,14 @@
 
 // How big the bloom is
 // x \in R : x >= 0
-#define BLOOM_SPREAD 8.0
+#define BLOOM_SPREAD 2.0
 // How visible the bloom is
 // [0, 1]
-#define BLOOM_STRENGTH 0.004
+#define BLOOM_STRENGTH 0.05
 
 // Backgrond opacity
 // [0, 1]
-#define BACKGROUND_OPACITY 0.8
+#define BACKGROUND_OPACITY 0.55
 
 
 // Disabled values for when the settings are not defined
@@ -264,10 +264,6 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
         apertureGrilleMask = mod(-8*fragCoord.x, APERTURE_GRILLE_PERIOD) / APERTURE_GRILLE_PERIOD;
 
     fragColor.rgb *= 1.0 - APERTURE_GRILLE_STRENGTH*apertureGrilleMask;
-
-
-    // Add flicker
-    fragColor *= 1.0 - FLICKER_STRENGTH/2.0*(1.0 + sin(2*PI*FLICKER_FREQUENCY*iTime));
 
 
     // Add noise

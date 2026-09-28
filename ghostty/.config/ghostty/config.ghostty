@@ -11,4 +11,3 @@ font-size = 20
 font-family = "Liga SFMono Nerd Font" 
 
 custom-shader = "shaders/crt.glsl"
-custom-shader-animation = true

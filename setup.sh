@@ -42,12 +42,23 @@ install_packages() {
     esac
 }
 
+# install git first so we can clone dotfiles
+install_packages git
+
+# clone dotfiles if they dont exist
+if [[ ! -d "$HOME/dotfiles/.git" ]]; then
+    git clone https://github.com/sleeepyskies/dotfiles.git "$HOME/dotfiles"
+fi
+
 # packages
 if [[ "$PACKMAN" == "apt" ]]; then
     install_packages git stow neovim zsh fd-find ripgrep curl tmux
 else
     install_packages git stow neovim zsh fd-find ripgrep curl tmux
 fi
+
+# make zsh the default shell
+chsh -s "$(command -v zsh)" "$USER"
 
 # install oh my zsh
 if [[ ! -d "$HOME/.oh-my-zsh" ]]; then

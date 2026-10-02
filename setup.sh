@@ -73,6 +73,9 @@ if [[ ! -d "$P10K_DIR" ]]; then
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$P10K_DIR"
 fi
 
+# install p10k plugins
+git clone https://github.com/jeffreytse/zsh-vi-mode "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-vi-mode"
+
 # dotfiles
 cd "$HOME/dotfiles"
 

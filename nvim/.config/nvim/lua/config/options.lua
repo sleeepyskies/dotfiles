@@ -3,6 +3,11 @@
 -- Add any additional options here
 
 local opt = vim.opt
+local global = vim.g
+
 opt.shiftwidth = 4
 opt.colorcolumn = "80,120"
 opt.background = "dark"
+opt.swapfile = false
+
+global.snacks_animate = false

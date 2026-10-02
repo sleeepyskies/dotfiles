@@ -3,4 +3,13 @@
 	email = skyswalla@gmail.com
 [init]
 	defaultBranch = main
-[alias]
+[gpg]
+    format = ssh
+[commit]
+    gpgsign = true
+[user]
+    signingkey = ~/.ssh/id_ed25519.pub
+
+[credential "https://git.sleeepy.dev"]
+	helper = 
+	helper = !tea login helper

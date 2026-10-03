@@ -1,5 +1,7 @@
 # `dotfiles`
 
+This is no longer active and has migrated to https://git.sleeepy.dev/sleeepy/dotfiles.
+
 This repo contains all of my dot files to sync across machines.
 
 A setup script has been provided that _should_ handle configuring the new machine.
